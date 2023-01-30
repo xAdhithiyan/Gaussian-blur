@@ -5,7 +5,7 @@ from PIL import Image,ImageTk
 
 #enter image directory here
 
-imtoblurr=r"images\Image-File-icon.jpg"
+imtoblurr=r"Gaussian-blur/images/Image-File-icon.jpg"
 #imtoblurr=r"images\lol.jpg"
 a = Image.open(f"{imtoblurr}")#r is raw string
 spix = a.load()#loads pixel data
@@ -52,7 +52,7 @@ def cal(ll,finalist):
 
 
 pixmatrix()
-a.save(r"images\blurred_image.jpg")
+a.save(r"Gaussian-blur/images/blurred_image.jpg")
 
 
 def exit_():
@@ -73,7 +73,7 @@ def screen2():
     l21=Label(screen2,text="Blurred Image",font=("Calibri",25))
     l21.place(x=390,y=30)
     #final image
-    finalblur=Image.open(r"images\blurred_image.jpg")
+    finalblur=Image.open(r"Gaussian-blur/images/blurred_image.jpg")
     im5=finalblur.resize((250,250))
     myim5 = ImageTk.PhotoImage(im5)
     myl5=Label(screen2,image=myim5)
@@ -91,7 +91,7 @@ def screen():
     cc='#369DA2'
     screen.geometry("640x480")
     #bg image
-    image=Image.open(r"images\gradiant.jfif")
+    image=Image.open(r"Gaussian-blur/images/gradiant.jfif")
     im=image.resize((640,480))
     myim = ImageTk.PhotoImage(im)
     myl =Label(screen,image=myim)
